@@ -15,7 +15,7 @@
 ## 專案架構
 
 ```
-/Basic-PWA/
+/Basic-PythonFlask-PWA/
 │
 ├── app.py                  # Flask 應用入口點
 ├── templates/
@@ -190,7 +190,6 @@ Web App Manifest 是一個 JSON 檔案，提供瀏覽器關於 PWA 的重要信�
 - [工作室的 Web 進化升級成 PWA 感想 (無深入技術講述純分享)](https://medium.com/@zay800211/%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%9A%84-web-%E9%80%B2%E5%8C%96%E5%8D%87%E7%B4%9A%E6%88%90-pwa-%E6%84%9F%E6%83%B3-%E7%84%A1%E6%B7%B1%E5%85%A5%E6%8A%80%E8%A1%93%E8%AC%9B%E8%BF%B0%E7%B4%94%E5%88%86%E4%BA%AB-9327c47f8dd3)
 - [PWA介紹 (Progressive Web App)，優、缺點及範例介紹](https://www.arshire.com/blog/pwa)
 - [Learn PWA](https://web.dev/learn/pwa)
-- [MDN Web Docs: Progressive web apps](https://developer.mozilla.org/zh-TW/docs/Web/Progressive_web_apps)
-- [使用 Service Worker 讓網頁瀏覽更順暢](https://developers.google.com/web/fundamentals/primers/service-workers?hl=zh-tw)
-- [Web App Manifest](https://developer.mozilla.org/zh-TW/docs/Web/Manifest)
-- [PWA 實戰：離線存取和快取策略](https://web.dev/learn/pwa/caching)
+- [漸進式網路應用程式 | MDN](https://developer.mozilla.org/zh-TW/docs/Web/Progressive_web_apps)
+- [Service Worker 總覽 | Workbox | Chrome for Developers](https://developers.google.com/web/fundamentals/primers/service-workers?hl=zh-tw)
+- [Web 應用程式清單 - 漸進式網路應用程式 | MDN](https://developer.mozilla.org/zh-TW/docs/Web/Manifest)
