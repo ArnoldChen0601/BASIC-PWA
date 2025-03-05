@@ -15,7 +15,7 @@
 ## 專案架構
 
 ```
-/Basic_PWA-PythonFlask/
+/BasicPWA-PythonFlask/
 │
 ├── app.py                  # Flask 應用入口點
 ├── templates/
