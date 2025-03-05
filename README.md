@@ -96,7 +96,27 @@ Web App Manifest 是一個 JSON 檔案，提供瀏覽器關於 PWA 的重要資�
     "short_name": "MyPWA",                // 短名稱，用於主螢幕圖示下方顯示
     "description": "一個基於 Flask 的漸進式網頁應用",  // 應用程式描述
     "start_url": "/",                     // 啟動時載入的 URL
-    // ... 其他設定 ...
+    "display": "standalone",              // 顯示模式，隱藏瀏覽器UI
+    "background_color": "#ffffff",        // 啟動畫面背景色
+    "theme_color": "#4285f4",             // 瀏覽器主題色
+    "orientation": "portrait",            // 首選螢幕方向
+    "lang": "zh-TW",                      // 語言設定
+    "categories": ["utilities", "education"], // 應用類別
+    "scope": "/",                         // 應用導航範圍
+    "icons": [
+        {
+            "src": "/static/icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/static/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
 }
 ```
 
