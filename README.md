@@ -68,15 +68,15 @@ const urlsToCache = [
 
 **Service Worker 生命週期與事件：**
 
-1. **Install 事件**: 當 Service Worker 首次安裝時觸發
+1. **Install 事件**：當 Service Worker 首次安裝時觸發
    - 預先快取關鍵資源（HTML、CSS、圖示等）
    - `self.skipWaiting()` 確保新版本立即激活
 
-2. **Activate 事件**: 當 Service Worker 開始控制頁面時觸發
+2. **Activate 事件**：當 Service Worker 開始控制頁面時觸發
    - 清理舊版快取
    - 準備處理網路請求
 
-3. **Fetch 事件**: 當頁面發出網路請求時觸發
+3. **Fetch 事件**：當頁面發出網路請求時觸發
    - 實現快取策略 (Cache-First Strategy)
    - 檢查快取中是否有請求的資源
    - 如果沒有，從網路獲取並添加到快取
@@ -141,7 +141,7 @@ Web App Manifest 是一個 JSON 檔案，提供瀏覽器關於 PWA 的重要資�
 
 ## PWA 安裝流程
 
-最新的瀏覽器會自動識別符合 PWA 標準的應用程式，並提示用戶安裝：
+最新的瀏覽器會自動識別符合 PWA 標準的應用程式，並提示使用者安裝：
 
 1. 在 Chrome 或 Edge 中，地址欄右側會出現「安裝」圖示
 2. 在移動設備上，提示可能顯示為「添加到主畫面」
