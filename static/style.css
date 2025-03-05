@@ -1,0 +1,58 @@
+/* ============================================================================
+ * PWA 基本樣式表
+ * ============================================================================
+ * 這個檔案包含應用程式的基本視覺樣式，包括主題色彩和離線提示元素的樣式。
+ */
+
+/* 基本頁面樣式 */
+body {
+  /* 設定無襯線字型 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* 重設邊距和填充 */
+  margin: 0;
+  padding: 20px;
+  /* 設定最大寬度，使內容在大螢幕上更易讀 */
+  max-width: 800px;
+  /* 水平置中內容 */
+  margin: 0 auto;
+  /* 行高設定，提高可讀性 */
+  line-height: 1.6;
+  /* 文字顏色 */
+  color: #333;
+}
+
+/* 主標題樣式 */
+h1 {
+  /* 使用 PWA 主題色彩 */
+  color: #4285f4;
+  /* 置中標題 */
+  text-align: center;
+}
+
+/* 離線狀態訊息樣式 */
+.offline-msg {
+  /* 預設隱藏 */
+  display: none;
+  /* 黃色警告背景 */
+  background-color: #ffeb3b;
+  /* 內部填充 */
+  padding: 10px;
+  /* 圓角邊框 */
+  border-radius: 5px;
+  /* 文字置中 */
+  text-align: center;
+  /* 上邊距 */
+  margin-top: 20px;
+}
+
+/* 響應式網頁設計 */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    margin: 0 5px;
+  }
+  h1 {
+    font-size: 1.5em;
+    color: red;
+  }
+}

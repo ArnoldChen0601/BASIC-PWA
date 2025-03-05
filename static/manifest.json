@@ -1,0 +1,27 @@
+{
+    "name": "My Progressive Web App",
+    "short_name": "MyPWA",
+    "description": "一個基於 Flask 的漸進式網頁應用",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4285f4",
+    "orientation": "portrait",
+    "lang": "zh-TW",
+    "categories": ["utilities", "education"],
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/static/icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/static/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

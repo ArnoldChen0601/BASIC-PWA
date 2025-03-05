@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <!-- 視口設定，確保在行動裝置上正確顯示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PWA</title>
+    
+    <!-- PWA 必要連結 -->
+    <!-- manifest.json 定義應用程式的外觀和行為 -->
+    <link rel="manifest" href="/static/manifest.json">
+    <!-- 網站圖示 -->
+    <link rel="icon" href="/static/icon.png" type="image/png">
+    <!-- 樣式表 -->
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <!-- PWA 相關標籤 -->
+    <!-- 主題顏色定義瀏覽器 UI 元素（如地址欄）的顏色 -->
+    <meta name="theme-color" content="#4285f4">
+    <!-- 應用程式描述 -->
+    <meta name="description" content="一個基於 Flask 的漸進式網頁應用">
+    <!-- iOS 特定標籤 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="MyPWA">
+    <link rel="apple-touch-icon" href="/static/icon.png">
+</head>
+<body>
+    <h1>Welcome to My PWA</h1>
+    <p>This is a basic Progressive Web App.</p>
+    
+    <!-- 離線狀態提示 (預設隱藏) -->
+    <div class="offline-msg" id="offlineMsg">
+        您現在處於離線狀態。某些功能可能無法使用。
+    </div>
+
+    <script>
+        // Service Worker 註冊 
+        // 確認瀏覽器支援 Service Worker API
+        if ('serviceWorker' in navigator) {
+            // 註冊 Service Worker
+            navigator.serviceWorker.register('/static/service-worker.js', {
+                scope: '/'  // 控制範圍 - 整個網站
+            }).then(function(registration) {
+                // 註冊成功
+                console.log('Service Worker 註冊成功，範圍：', registration.scope);
+            }).catch(function(error) {
+                // 註冊失敗
+                console.log('Service Worker 註冊失敗：', error);
+                console.log('嘗試重新載入頁面。如果問題持續存在，請檢查 Service Worker 配置。');
+            });
+        }
+
+        // 網路狀態監控
+        // 當網路連線恢復時隱藏離線訊息
+        window.addEventListener('online', function() {
+            document.getElementById('offlineMsg').style.display = 'none';
+        });
+        
+        // 當網路連線中斷時顯示離線訊息
+        window.addEventListener('offline', function() {
+            document.getElementById('offlineMsg').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
