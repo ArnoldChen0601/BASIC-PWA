@@ -4,7 +4,7 @@
 
 ## 什麼是 PWA?
 
-漸進式網頁應用（Progressive Web App, PWA）結合了網頁和原生應用程式的優點，提供:
+漸進式網頁應用（Progressive Web App, PWA）結合了網頁和原生應用程式的優點，提供：
 
 - 💻 跨平台相容性（一次開發，處處運行）
 - 🔌 離線工作能力
@@ -44,11 +44,11 @@
 
 **關鍵部分解析：**
 
-- **Viewport Meta Tag**: `<meta name="viewport" content="width=device-width, initial-scale=1.0">` 確保應用在行動裝置上正確顯示
-- **Web App Manifest**: `<link rel="manifest" href="/static/manifest.json">` 連結到定義 PWA 安裝和顯示行為的 JSON 檔案
-- **iOS 特定標籤**: 使 PWA 能在 iOS 設備上提供更原生的體驗
-- **Service Worker 註冊**: JavaScript 程式碼註冊 Service Worker，啟用離線功能
-- **網路狀態監控**: 偵測設備是否處於離線狀態，並相應更新 UI
+- **Viewport Meta Tag**：`<meta name="viewport" content="width=device-width, initial-scale=1.0">` 確保應用在行動裝置上正確顯示
+- **Web App Manifest**：`<link rel="manifest" href="/static/manifest.json">` 連結到定義 PWA 安裝和顯示行為的 JSON 檔案
+- **iOS 特定標籤**：使 PWA 能在 iOS 設備上提供更原生的體驗
+- **Service Worker 註冊**：JavaScript 程式碼註冊 Service Worker，啟用離線功能
+- **網路狀態監控**：偵測設備是否處於離線狀態，並相應更新 UI
 
 ### 2. service-worker.js
 
@@ -88,7 +88,7 @@ const urlsToCache = [
 
 ### 3. manifest.json
 
-Web App Manifest 是一個 JSON 檔案，提供瀏覽器關於 PWA 的重要信息：
+Web App Manifest 是一個 JSON 檔案，提供瀏覽器關於 PWA 的重要資訊：
 
 ```json
 {
